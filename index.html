@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelEase - Your Travel Companion</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Login page will be shown initially -->
+    <div id="login-container" class="container">
+      <div class="login-form">
+        <div class="logo-container">
+          <i class="fas fa-plane-departure logo-icon"></i>
+          <h1>TravelEase</h1>
+        </div>
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Your journey begins with a simple login</p>
+        
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username"><i class="fas fa-user"></i> Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+          </div>
+          <div class="form-group">
+            <label for="password"><i class="fas fa-lock"></i> Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn-login">Login <i class="fas fa-arrow-right"></i></button>
+          </div>
+          <p id="login-error" class="error-message"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Dashboard will be hidden initially -->
+    <div id="dashboard-container" class="container hidden">
+      <header class="dashboard-header">
+        <div class="logo">
+          <i class="fas fa-plane-departure"></i>
+          <h1>TravelEase</h1>
+        </div>
+        <div class="user-actions">
+          <span id="welcome-user"><i class="fas fa-user-circle"></i> Welcome, Admin</span>
+          <button id="logout-btn" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+      </header>
+
+      <main class="dashboard-content">
+        <h2 class="section-title">Travel Services</h2>
+        <p class="section-subtitle">Explore our comprehensive travel solutions for your next adventure</p>
+        
+        <div class="categories-container">
+          <!-- Flight Booking Category -->
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-plane"></i>
+            </div>
+            <h3>Flight Booking</h3>
+            <p>Book your next flight journey with ease and convenience. Compare prices and find the best deals.</p>
+            <div class="subcategories">
+              <div class="subcategory-section" id="domestic-flights">
+                <a href="#" class="subcategory" id="domestic-flight-link">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Domestic Flights
+                </a>
+                <!-- Domestic Flight Airlines - Initially Hidden -->
+                <div class="domestic-content hidden">
+                  <div class="airlines-container">
+                    <h4>Popular Airlines</h4>
+                    <div class="airlines-grid">
+                      <a href="https://www.goindigo.in/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>IndiGo</span>
+                      </a>
+                      <a href="https://www.airindia.in/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Air India</span>
+                      </a>
+                      <a href="https://www.akasaair.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Akasa Air</span>
+                      </a>
+                      <a href="https://www.spicejet.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>SpiceJet</span>
+                      </a>
+                      <a href="https://www.airindiaexpress.in/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Air India Express</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="subcategory-section" id="international-flights">
+                <a href="#" class="subcategory" id="international-flight-link">
+                  <i class="fas fa-globe-americas"></i>
+                  International Flights
+                </a>
+                <!-- International Flight Airlines - Initially Hidden -->
+                <div class="international-content hidden">
+                  <div class="airlines-container">
+                    <h4>International Airlines</h4>
+                    <div class="airlines-grid">
+                      <a href="https://www.etihad.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Etihad</span>
+                      </a>
+                      <a href="https://www.lufthansa.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Lufthansa</span>
+                      </a>
+                      <a href="https://www.airindia.in/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Air India</span>
+                      </a>
+                      <a href="https://www.qatarairways.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Qatar</span>
+                      </a>
+                      <a href="https://www.singaporeair.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Singapore</span>
+                      </a>
+                      <a href="https://www.united.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>United</span>
+                      </a>
+                      <a href="https://www.britishairways.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>British Airways</span>
+                      </a>
+                      <a href="https://www.airfrance.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Air France</span>
+                      </a>
+                      <a href="https://www.turkishairlines.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Turkish Airways</span>
+                      </a>
+                      <a href="https://www.gulfair.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Gulf Air</span>
+                      </a>
+                      <a href="https://www.airnewzealand.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Air New Zealand</span>
+                      </a>
+                      <a href="https://www.qantas.com/" target="_blank" class="airline-card">
+                        <i class="fas fa-plane"></i>
+                        <span>Qantas</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="category-link">Explore Flight Options <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Train Booking Category -->
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-train"></i>
+            </div>
+            <h3>Train Booking</h3>
+            <p>Travel by rail with comfortable and affordable options. Book tickets for your next train journey.</p>
+            <a href="https://www.irctc.co.in/" target="_blank" class="category-link">Book Train Tickets <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Bus Booking Category -->
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-bus"></i>
+            </div>
+            <h3>Bus Booking</h3>
+            <p>Explore intercity and interstate bus travel options. Find the most convenient routes and schedules.</p>
+            <a href="https://www.redbus.in/" target="_blank" class="category-link">Find Bus Routes <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Passport Services Category -->
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-passport"></i>
+            </div>
+            <h3>Passport Services</h3>
+            <p>Get assistance with passport application and renewal. Streamline your documentation process.</p>
+            <a href="https://www.passportindia.gov.in/" target="_blank" class="category-link">Passport Assistance <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Visa Booking Category -->
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <h3>Visa Booking</h3>
+            <p>Simplify your visa application process with our services. Get guidance for international travel documents.</p>
+            <a href="https://www.vfsglobal.com/" target="_blank" class="category-link">Apply for Visa <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="dashboard-footer">
+        <p>&copy; 2023 TravelEase. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
